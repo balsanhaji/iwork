@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1">
+	
+    <servlet>
+        <servlet-name>Inscription</servlet-name>
+        <servlet-class>signin</servlet-class>
+    </servlet>
+		
+    <servlet>
+        <servlet-name>Articles</servlet-name>
+        <servlet-class>articles</servlet-class>
+    </servlet>
+
+      <servlet>
+        <servlet-name>Connexion</servlet-name>
+        <servlet-class>connexion</servlet-class>
+    </servlet>
+	
+      <servlet>
+        <servlet-name>Deconnexion</servlet-name>
+        <servlet-class>deconnexion</servlet-class>
+    </servlet>
+
+	<!-- -->
+	
+    <servlet-mapping>
+        <servlet-name>Inscription</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+	
+    <servlet-mapping>
+        <servlet-name>Articles</servlet-name>
+        <url-pattern>/articles</url-pattern>
+    </servlet-mapping>
+
+     <servlet-mapping>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+	
+     <servlet-mapping>
+        <servlet-name>Deconnexion</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
